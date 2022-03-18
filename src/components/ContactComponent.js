@@ -5,7 +5,7 @@ import {
 	Button,
 	Label,
 	Col,
-	Row,
+    Row,
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { Control, LocalForm } from "react-redux-form";
@@ -39,6 +39,7 @@ class Contact extends Component {
 	}
 
 	render() {
+
 		return (
 			<div className="container">
 				<div className="row">
@@ -157,7 +158,7 @@ class Contact extends Component {
 											<Control.checkbox
 												model=".agree"
 												name="agree"
-												className="form-check-input"
+												className="form-control-input"
 											/>{" "}
 											<strong>May we contact you?</strong>
 										</Label>
