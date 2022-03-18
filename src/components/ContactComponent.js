@@ -158,7 +158,7 @@ class Contact extends Component {
 											<Control.checkbox
 												model=".agree"
 												name="agree"
-												className="form-control-input"
+												className="form-check-input"
 											/>{" "}
 											<strong>May we contact you?</strong>
 										</Label>
