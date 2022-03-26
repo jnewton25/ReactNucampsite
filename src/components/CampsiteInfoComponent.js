@@ -40,7 +40,7 @@ class CommentForm extends Component {
 
 	handleSubmit(values) {
 		this.toggleModal();
-        this.props.postComment(
+		this.props.postComment(
 			this.props.campsiteId,
 			values.rating,
 			values.author,
@@ -69,6 +69,7 @@ class CommentForm extends Component {
 								<Label htmlFor="rating">Rating</Label>
 								<Control.select
 									model=".rating"
+									id="rating"
 									name="rating"
 									className="form-control"
 								>
@@ -100,7 +101,7 @@ class CommentForm extends Component {
 									component="div"
 									messages={{
 										minLength:
-											"Must be at least two characters",
+											"Must be at least 2 characters",
 										maxLength:
 											"Must be 15 characters or less",
 									}}
@@ -193,7 +194,7 @@ function RenderComments({ comments, postComment, campsiteId }) {
 }
 
 function CampsiteInfo(props) {
-    if (props.isLoading) {
+	if (props.isLoading) {
 		return (
 			<div className="container">
 				<div className="row">
@@ -240,8 +241,9 @@ function CampsiteInfo(props) {
 				</div>
 			</div>
 		);
+	} else {
+		return <div></div>;
 	}
-	return <div />;
 }
 
 export default CampsiteInfo;
